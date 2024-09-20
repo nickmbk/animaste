@@ -1,0 +1,29 @@
+# Ignore WordPress core files
+wp-admin/
+wp-includes/
+
+# Ignore the contents of wp-content/uploads, but not the folder itself
+wp-content/uploads/*
+
+# Ignore all themes except the one working on
+wp-content/themes/twentytwentyfour/*
+wp-content/themes/twentytwentythree/*
+wp-content/themes/twentytwentytwo/*
+
+# Ignore config files
+wp-config.php
+
+# Ignore other OS-specific or IDE-specific files
+.DS_Store
+Thumbs.db
+*.log
+
+# Composer / vendor folder (if you're using Composer)
+vendor/
+composer.lock
+
+# Node modules (if using npm or yarn)
+node_modules/
+
+# Ignore anything related to Git itself
+.git/
