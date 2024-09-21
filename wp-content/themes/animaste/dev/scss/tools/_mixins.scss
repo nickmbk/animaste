@@ -1,0 +1,4 @@
+@mixin font($mobile, $mobileHeight, $desktop, $desktopHeight) {
+    font-size: clamp($mobile, $mobile + (1vw * (#{strip-unit($desktop)} - #{strip-unit($mobile)})), $desktop);
+    line-height: clamp($mobileHeight, $mobileHeight + (1vw * (#{strip-unit($desktopHeight)} - #{strip-unit($mobileHeight)})), $desktopHeight);
+}

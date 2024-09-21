@@ -19,11 +19,24 @@ gulp.task('concat-js', function(){
     .pipe(gulp.dest('web/js'));
 });
 
+gulp.task('copyImages', function() {
+    return gulp.src('./dev/images/**/*')
+        .pipe(gulp.dest('./web/images'));
+});
+
+gulp.task('copyFonts', function() {
+    return gulp.src('./dev/fonts/**/*')
+        .pipe(gulp.dest('./web/fonts'));
+});
+
+
 
 
 
 gulp.task('watch', function() {
     gulp.watch('./dev/scss/**/*.scss', gulp.series('sass'));
+    gulp.watch('./dev/images/**/*', gulp.series('copyImages'));
+    gulp.watch('./dev/fonts/**/*', gulp.series('copyFonts'));
 });
 
-gulp.task('-', gulp.series('sass', 'watch'));
+gulp.task('-', gulp.parallel('sass', 'copyImages', 'copyFonts', 'watch'));

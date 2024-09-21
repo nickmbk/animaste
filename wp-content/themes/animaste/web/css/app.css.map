@@ -1,1 +1,1 @@
-{"version":3,"sources":["settings/_variables.scss"],"names":[],"mappings":"AAEA;EACI,OAHG","file":"app.css","sourcesContent":["$blue: blue;\r\n\r\nh1 {\r\n    color: $blue;\r\n}"]}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"app.css","sourcesContent":[]}
